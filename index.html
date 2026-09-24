@@ -50,14 +50,14 @@
 <section class="content">
 <header class="topbar">
   <div class="online"><i></i><b>Онлайн</b><strong id="online">245 / 1000</strong></div>
-  <div class="top-actions"><button class="icon-btn bell" id="bell"><svg><use href="#i-bell"/></svg><em>3</em></button><button class="icon-btn" id="settings"><svg><use href="#i-settings"/></svg></button><button class="user-chip" data-page="profile"><span class="mini-avatar"><span class="avatar-art"></span></span><span><b>BossRudenko</b><small>ID: #601</small></span><strong>⌄</strong></button></div>
+  <div class="top-actions"><button class="icon-btn bell" id="bell"><svg><use href="#i-bell"/></svg><em>3</em></button><button class="icon-btn" id="settings"><svg><use href="#i-settings"/></svg></button><button class="user-chip" id="userChip"><span class="mini-avatar"><span class="avatar-art"></span></span><span><b id="topUsername">BossRudenko</b><small id="topUserMeta">Увійти в акаунт</small></span><strong>⌄</strong></button></div>
 </header>
 
 <main>
 <section class="page active" id="home">
 <div class="top-grid">
 <article class="hero panel"><div class="hero-city"><div class="sun"></div><i class="tower"></i><i class="tower t2"></i><i class="tower t3"></i><div class="road"></div><div class="palm p1"></div><div class="palm p2"></div></div><div class="hero-content"><div class="hero-logo">BOSS <b>RP</b></div><h1>Твій світ. <span>Твої правила.</span></h1><p>Найкращий RolePlay сервер з унікальним геймплеєм, стабільною роботою та дружньою спільнотою!</p><button class="play" id="play"><svg><use href="#i-play"/></svg>Грати</button></div></article>
-<aside class="profile panel"><div class="avatar-big"><span class="avatar-art"></span></div><div class="profile-name">BossRudenko<small>ID: #601</small><span><svg><use href="#i-crown"/></svg> PREMIUM</span></div><div class="money"><b><svg><use href="#i-money"/></svg></b><strong>$ 125 000</strong><i><svg><use href="#i-crown"/></svg></i><strong>1 250</strong></div><div class="level"><b>3</b><div><strong>Рівень</strong><div class="xp"><i></i></div></div><span>124 / 300 XP</span></div></aside>
+<aside class="profile panel"><div class="avatar-big"><span class="avatar-art"></span></div><div class="profile-name"><span id="profileNameText">BossRudenko</span><small id="profileIdText">ID: #601</small><span id="profileBadge"><svg><use href="#i-crown"/></svg> PREMIUM</span></div><div class="money"><b><svg><use href="#i-money"/></svg></b><strong id="balanceText">$ 125 000</strong><i><svg><use href="#i-crown"/></svg></i><strong id="coinsText">1 250</strong></div><div class="level"><b id="levelText">3</b><div><strong>Рівень</strong><div class="xp"><i id="xpBar"></i></div></div><span id="xpText">124 / 300 XP</span></div></aside>
 </div>
 
 <div class="feature-grid">
@@ -87,7 +87,7 @@
 <div class="bottom-links"><button data-page="support"><svg><use href="#i-headset"/></svg><span><b>Підтримка</b><small>Зв'язатися з адміністрацією</small></span></button><button data-page="discord"><svg><use href="#i-discord"/></svg><span><b>Discord</b><small>Приєднуйся до спільноти</small></span></button><button data-page="rules"><svg><use href="#i-doc"/></svg><span><b>Правила</b><small>Ознайомся з правилами сервера</small></span></button><div class="car-ad"><div class="ad-car"></div><span><b>BOSS RP</b><small>Більше, ніж просто гра</small></span></div></div>
 </section>
 
-<section class="page inner" id="profile"><h1>Профіль</h1><div class="detail-grid"><div class="detail-card profile-detail"><div class="avatar-xl"><span class="avatar-art"></span></div><h2>BossRudenko</h2><p>ID: #601 · Premium</p><div class="big-stats"><b>$125 000<small>Баланс</small></b><b>1 250<small>Premium Coins</small></b><b>3<small>Рівень</small></b></div></div><div class="detail-card"><h2>Прогрес</h2><p>До наступного рівня</p><div class="large-xp"><i></i></div><strong>124 / 300 XP</strong><hr><p>Статус: <em class="green">Онлайн</em></p><p>Відіграно: 184 години</p></div></div></section>
+<section class="page inner" id="profile"><h1>Профіль</h1><div class="detail-grid"><div class="detail-card profile-detail"><div class="avatar-xl"><span class="avatar-art"></span></div><h2 id="detailName">BossRudenko</h2><p id="detailMeta">ID: #601 · Premium</p><div class="big-stats"><b id="detailBalance">$125 000<small>Баланс</small></b><b id="detailCoins">1 250<small>Premium Coins</small></b><b id="detailLevel">3<small>Рівень</small></b></div></div><div class="detail-card"><h2>Прогрес</h2><p>До наступного рівня</p><div class="large-xp"><i></i></div><strong id="detailXp">124 / 300 XP</strong><hr><p>Статус: <em class="green">Онлайн</em></p><p>Відіграно: 184 години</p></div></div></section>
 <section class="page inner" id="stats"><h1>Статистика</h1><div class="detail-grid"><div class="detail-card"><h2>Твоя статистика</h2><div class="stat-list"><b>Годин у грі <span>184</span></b><b>Виконано робіт <span>326</span></b><b>Автомобілів <span>7</span></b><b>Нерухомості <span>3</span></b><b>Репутація <span>1 284</span></b></div></div></div></section>
 <section class="page inner" id="garage"><h1>Гараж</h1><div class="cards"><div class="detail-card car-card"><h2>Ваш транспорт</h2><div class="fake-car"><svg><use href="#i-car"/></svg></div><b>Boss GT-R</b><p>Спорткар · Гараж #01</p></div><div class="detail-card"><h2>Автомобілі</h2><p>У тебе 7 транспортних засобів.</p><button class="play">Відкрити гараж</button></div></div></section>
 <section class="page inner" id="property"><h1>Нерухомість</h1><div class="detail-grid"><div class="detail-card"><h2>Будинки</h2><p>Квартира Downtown #21</p><p>Гараж включено</p><button class="play">Керувати</button></div><div class="detail-card"><h2>Баланс нерухомості</h2><strong class="big">$ 850 000</strong></div></div></section>
@@ -99,5 +99,18 @@
 <section class="page inner" id="support"><h1>Підтримка</h1><div class="detail-card"><h2>Служба підтримки</h2><p>Опиши проблему та адміністрація допоможе тобі.</p><button class="play" id="supportBtn">Створити звернення</button></div></section>
 </main></section></div>
 <div class="toast" id="toast"></div>
+<div class="auth-modal" id="authModal" aria-hidden="true">
+  <div class="auth-box">
+    <button class="close" id="authClose">×</button>
+    <div class="auth-kicker">BOSS RP ACCOUNT</div>
+    <h2 id="authTitle">Увійти в BOSS RP</h2>
+    <p id="authSubtitle">Збережи профіль, баланс, рівень та статистику на всіх своїх пристроях.</p>
+    <button class="oauth-btn google" id="googleLogin"><span class="oauth-icon">G</span> Увійти через Google</button>
+    <button class="oauth-btn discord" id="discordLogin"><svg><use href="#i-discord"/></svg> Увійти через Discord</button>
+    <div class="auth-divider"><span>БЕЗПЕЧНА АВТОРИЗАЦІЯ</span></div>
+    <small id="authConfigHint">Після першого входу дані прив'яжуться до твого акаунта.</small>
+    <button class="logout-btn" id="logoutBtn" hidden>Вийти з акаунта</button>
+  </div>
+</div>
 <div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">×</button><span>ПІДКЛЮЧЕННЯ</span><h2>ОБЕРИ СЕРВЕР</h2><button class="server-choice"><b>BOSS RP #01</b><small>245 / 1000 · ONLINE · 32 ms</small><strong>ГРАТИ →</strong></button><button class="server-choice"><b>BOSS RP #02</b><small>671 / 1000 · ONLINE · 35 ms</small><strong>ОБРАТИ →</strong></button></div></div>
-<script src="script.js?v=7"></script></body></html>
+<script type="module" src="script.js?v=8"></script></body></html>
