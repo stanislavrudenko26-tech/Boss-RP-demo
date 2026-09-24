@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BOSS RP — RolePlay</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scanlines"></div>
+<header class="top">
+  <div class="brand"><span class="bolt">◆</span><div><b>BOSS</b><strong>RP</strong><small>ROLEPLAY PROJECT</small></div></div>
+  <nav><a class="active" href="#home">ГОЛОВНА</a><a href="#features">МОЖЛИВОСТІ</a><a href="#servers">СЕРВЕРИ</a><a href="#community">СПІЛЬНОТА</a></nav>
+  <button class="play" onclick="notify('Підключення до BOSS RP...')">PLAY NOW <span>↗</span></button>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">NEXT GENERATION ROLEPLAY</div>
+    <h1>BOSS<br><span>ROLEPLAY</span></h1>
+    <p>Твоя історія. Твоє місто. Твої правила.</p>
+    <div class="actions"><button class="primary" onclick="notify('Ласкаво просимо до BOSS RP')">ПОЧАТИ ГРАТИ <span>→</span></button><button class="ghost" onclick="document.querySelector('#features').scrollIntoView({behavior:'smooth'})">ДІЗНАТИСЯ БІЛЬШЕ</button></div>
+  </div>
+  <div class="hud-card profile">
+    <div class="hud-head"><span>PLAYER PROFILE</span><i>● ONLINE</i></div>
+    <div class="profile-main"><div class="avatar">B</div><div><h3>Boss</h3><p>ID #001</p></div><div class="premium">PREMIUM</div></div>
+    <div class="stats"><div><small>BALANCE</small><b>$125,000</b></div><div><small>LEVEL</small><b>24</b></div><div><small>XP</small><b>7,840</b></div></div>
+    <div class="bar"><span style="width:72%"></span></div>
+  </div>
+  <div class="hud-card vitals">
+    <div><div class="label">HP <b>100</b></div><div class="meter hp"><span style="width:100%"></span></div></div>
+    <div><div class="label">ARMOR <b>75</b></div><div class="meter armor"><span style="width:75%"></span></div></div>
+    <div><div class="label">HUNGER <b>48%</b></div><div class="meter"><span style="width:48%"></span></div></div>
+    <div><div class="label">THIRST <b>62%</b></div><div class="meter"><span style="width:62%"></span></div></div>
+  </div>
+  <div class="minimap"><div class="mapgrid"></div><span class="pin">◆</span><div class="map-label">CITY / DISTRICT 01</div></div>
+  <div class="weapon hud-card"><div class="weapon-title"><span>WEAPON</span><b>PISTOL</b></div><div class="gun">◢</div><div class="ammo"><strong>12</strong><span>/ 48</span></div></div>
+</section>
+
+<section class="inventory"><div class="section-tag">INVENTORY / LOADOUT</div><div class="slots">
+<div class="slot "><span>1</span><b>FIST</b><em>∞</em></div><div class="slot selected"><span>2</span><b>PISTOL</b><em>12/48</em></div><div class="slot "><span>3</span><b>SMG</b><em>30/120</em></div><div class="slot "><span>4</span><b>RIFLE</b><em>24/96</em></div><div class="slot "><span>5</span><b>SHOTGUN</b><em>8/40</em></div><div class="slot "><span>6</span><b>SNIPER</b><em>5/25</em></div>
+</div></section>
+
+<section id="features" class="features">
+<div class="section-head"><div><div class="eyebrow">CITY SYSTEM</div><h2>ВСЕ ДЛЯ ТВОЄЇ ГРИ</h2></div><span class="code">BOSS_RP // 001</span></div>
+<div class="feature-grid">
+<article class="feature"><div class="num">01</div><div class="ico">🚘</div><h3>GARAGE</h3><p>Керуй транспортом та збирай власну колекцію.</p><a href="#" onclick="notify('GARAGE відкрито');return false">OPEN →</a></article><article class="feature"><div class="num">02</div><div class="ico">⌂</div><h3>PROPERTY</h3><p>Купуй будинки, квартири та бізнеси.</p><a href="#" onclick="notify('PROPERTY відкрито');return false">OPEN →</a></article><article class="feature"><div class="num">03</div><div class="ico">▣</div><h3>JOBS</h3><p>Обирай професію та заробляй гроші.</p><a href="#" onclick="notify('JOBS відкрито');return false">OPEN →</a></article><article class="feature"><div class="num">04</div><div class="ico">♜</div><h3>FACTIONS</h3><p>Створюй команду та захоплюй місто.</p><a href="#" onclick="notify('FACTIONS відкрито');return false">OPEN →</a></article><article class="feature"><div class="num">05</div><div class="ico">◇</div><h3>SHOP</h3><p>Екіпірування, стиль та унікальні предмети.</p><a href="#" onclick="notify('SHOP відкрито');return false">OPEN →</a></article><article class="feature"><div class="num">06</div><div class="ico">⚡</div><h3>EVENTS</h3><p>Щоденні події та нагороди для гравців.</p><a href="#" onclick="notify('EVENTS відкрито');return false">OPEN →</a></article>
+</div></section>
+
+<section id="servers" class="server-panel"><div><div class="eyebrow">LIVE STATUS</div><h2>СЕРВЕР BOSS RP #01</h2><p><span class="dot"></span> ONLINE · 842 / 1000 PLAYERS</p></div><div class="server-numbers"><div><small>PING</small><b>32 ms</b></div><div><small>UPTIME</small><b>99.9%</b></div><button class="primary" onclick="notify('Сервер доступний')">CONNECT →</button></div></section>
+
+<section id="community" class="community"><div><div class="eyebrow">JOIN THE COMMUNITY</div><h2>ГРАЙ РАЗОМ</h2><p>PC · MOBILE · CONSOLE</p></div><div class="platforms"><div>▣<span>PC</span></div><div>▱<span>MOBILE</span></div><div>◇<span>CONSOLE</span></div></div></section>
+</main>
+<footer><b>BOSS<span>RP</span></b><span>© 2026 BOSS RP PROJECT</span><span>DISCORD · RULES · SUPPORT</span></footer>
+<div id="toast"></div><script src="script.js"></script>
+</body></html>
