@@ -31,7 +31,20 @@ function applyProfile(p,user){
   const dc=document.getElementById('detailCoins'); if(dc)dc.innerHTML=Number(coins).toLocaleString('uk-UA')+'<small>Premium Coins</small>';
   const dl=document.getElementById('detailLevel'); if(dl)dl.innerHTML=level+'<small>Рівень</small>';
   setText('detailXp',xp+' / 300 XP');
-  document.getElementById('userChip')?.classList.add('authenticated');
+  setText('statHours',p?.played_hours ?? 184);
+  setText('statJobs',p?.jobs_completed ?? 326);
+  setText('statVehicles',p?.vehicles ?? 7);
+  setText('statProperties',p?.properties ?? 3);
+  setText('statReputation',Number(p?.reputation ?? 1284).toLocaleString('uk-UA'));
+  const avatarUrl=p?.avatar_url || meta.avatar_url;
+  if(avatarUrl){
+    document.querySelectorAll('.mini-avatar,.avatar-big,.avatar-xl').forEach(el=>{
+      el.style.backgroundImage='url("'+avatarUrl.replace(/"/g,'')+'")';
+      el.style.backgroundSize='cover';
+      el.style.backgroundPosition='center';
+      const art=el.querySelector('.avatar-art'); if(art)art.style.display='none';
+    });
+  }  document.getElementById('userChip')?.classList.add('authenticated');
   document.getElementById('logoutBtn').hidden=false;
   document.getElementById('authTitle').textContent='Акаунт BOSS RP';
   document.getElementById('authSubtitle').textContent='Твій прогрес синхронізується з акаунтом і доступний на інших пристроях.';
