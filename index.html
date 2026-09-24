@@ -1,55 +1,74 @@
 <!doctype html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BOSS RP — RolePlay</title><link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BOSS RP — HUD</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="scanlines"></div>
-<header class="top">
-  <div class="brand"><span class="bolt">◆</span><div><b>BOSS</b><strong>RP</strong><small>ROLEPLAY PROJECT</small></div></div>
-  <nav><a class="active" href="#home">ГОЛОВНА</a><a href="#features">МОЖЛИВОСТІ</a><a href="#servers">СЕРВЕРИ</a><a href="#community">СПІЛЬНОТА</a></nav>
-  <button class="play" onclick="notify('Підключення до BOSS RP...')">PLAY NOW <span>↗</span></button>
+<div class="game-bg"><div class="city-grid"></div><div class="glow g1"></div><div class="glow g2"></div></div>
+<div class="scan"></div>
+
+<header class="hud-top">
+  <div class="brand"><span>BOSS</span><b>RP</b><small>ROLEPLAY</small></div>
+  <div class="clock"><strong id="clock">21:47</strong><span id="date">24.09.2026</span></div>
+  <div class="money"><small>BALANCE</small><strong>$125,000</strong><em>PREMIUM</em></div>
 </header>
 
-<main id="home">
-<section class="hero">
-  <div class="hero-copy">
-    <div class="eyebrow">NEXT GENERATION ROLEPLAY</div>
-    <h1>BOSS<br><span>ROLEPLAY</span></h1>
-    <p>Твоя історія. Твоє місто. Твої правила.</p>
-    <div class="actions"><button class="primary" onclick="notify('Ласкаво просимо до BOSS RP')">ПОЧАТИ ГРАТИ <span>→</span></button><button class="ghost" onclick="document.querySelector('#features').scrollIntoView({behavior:'smooth'})">ДІЗНАТИСЯ БІЛЬШЕ</button></div>
-  </div>
-  <div class="hud-card profile">
-    <div class="hud-head"><span>PLAYER PROFILE</span><i>● ONLINE</i></div>
-    <div class="profile-main"><div class="avatar">B</div><div><h3>Boss</h3><p>ID #001</p></div><div class="premium">PREMIUM</div></div>
-    <div class="stats"><div><small>BALANCE</small><b>$125,000</b></div><div><small>LEVEL</small><b>24</b></div><div><small>XP</small><b>7,840</b></div></div>
-    <div class="bar"><span style="width:72%"></span></div>
-  </div>
-  <div class="hud-card vitals">
-    <div><div class="label">HP <b>100</b></div><div class="meter hp"><span style="width:100%"></span></div></div>
-    <div><div class="label">ARMOR <b>75</b></div><div class="meter armor"><span style="width:75%"></span></div></div>
-    <div><div class="label">HUNGER <b>48%</b></div><div class="meter"><span style="width:48%"></span></div></div>
-    <div><div class="label">THIRST <b>62%</b></div><div class="meter"><span style="width:62%"></span></div></div>
-  </div>
-  <div class="minimap"><div class="mapgrid"></div><span class="pin">◆</span><div class="map-label">CITY / DISTRICT 01</div></div>
-  <div class="weapon hud-card"><div class="weapon-title"><span>WEAPON</span><b>PISTOL</b></div><div class="gun">◢</div><div class="ammo"><strong>12</strong><span>/ 48</span></div></div>
-</section>
+<main class="hud">
+  <section class="player panel">
+    <div class="panel-title"><span>PLAYER</span><b>ONLINE</b></div>
+    <div class="player-row">
+      <div class="avatar">B</div>
+      <div><h1>Boss</h1><p>ID #001</p></div>
+      <div class="lvl"><small>LVL</small><strong>24</strong></div>
+    </div>
+    <div class="xp"><span style="width:72%"></span></div>
+    <div class="xptext"><span>XP 7,840</span><span>10,000</span></div>
+  </section>
 
-<section class="inventory"><div class="section-tag">INVENTORY / LOADOUT</div><div class="slots">
-<div class="slot "><span>1</span><b>FIST</b><em>∞</em></div><div class="slot selected"><span>2</span><b>PISTOL</b><em>12/48</em></div><div class="slot "><span>3</span><b>SMG</b><em>30/120</em></div><div class="slot "><span>4</span><b>RIFLE</b><em>24/96</em></div><div class="slot "><span>5</span><b>SHOTGUN</b><em>8/40</em></div><div class="slot "><span>6</span><b>SNIPER</b><em>5/25</em></div>
-</div></section>
+  <section class="vitals panel">
+    <div class="stat"><span>HP</span><strong>100</strong><div><i style="width:100%"></i></div></div>
+    <div class="stat"><span>ARMOR</span><strong>75</strong><div><i style="width:75%"></i></div></div>
+    <div class="stat"><span>HUNGER</span><strong>48%</strong><div><i style="width:48%"></i></div></div>
+    <div class="stat"><span>THIRST</span><strong>62%</strong><div><i style="width:62%"></i></div></div>
+  </section>
 
-<section id="features" class="features">
-<div class="section-head"><div><div class="eyebrow">CITY SYSTEM</div><h2>ВСЕ ДЛЯ ТВОЄЇ ГРИ</h2></div><span class="code">BOSS_RP // 001</span></div>
-<div class="feature-grid">
-<article class="feature"><div class="num">01</div><div class="ico">🚘</div><h3>GARAGE</h3><p>Керуй транспортом та збирай власну колекцію.</p><a href="#" onclick="notify('GARAGE відкрито');return false">OPEN →</a></article><article class="feature"><div class="num">02</div><div class="ico">⌂</div><h3>PROPERTY</h3><p>Купуй будинки, квартири та бізнеси.</p><a href="#" onclick="notify('PROPERTY відкрито');return false">OPEN →</a></article><article class="feature"><div class="num">03</div><div class="ico">▣</div><h3>JOBS</h3><p>Обирай професію та заробляй гроші.</p><a href="#" onclick="notify('JOBS відкрито');return false">OPEN →</a></article><article class="feature"><div class="num">04</div><div class="ico">♜</div><h3>FACTIONS</h3><p>Створюй команду та захоплюй місто.</p><a href="#" onclick="notify('FACTIONS відкрито');return false">OPEN →</a></article><article class="feature"><div class="num">05</div><div class="ico">◇</div><h3>SHOP</h3><p>Екіпірування, стиль та унікальні предмети.</p><a href="#" onclick="notify('SHOP відкрито');return false">OPEN →</a></article><article class="feature"><div class="num">06</div><div class="ico">⚡</div><h3>EVENTS</h3><p>Щоденні події та нагороди для гравців.</p><a href="#" onclick="notify('EVENTS відкрито');return false">OPEN →</a></article>
-</div></section>
+  <section class="location panel"><span>LOCATION</span><strong>DOWNTOWN</strong><small>SECTOR 01 · BOSS CITY</small></section>
 
-<section id="servers" class="server-panel"><div><div class="eyebrow">LIVE STATUS</div><h2>СЕРВЕР BOSS RP #01</h2><p><span class="dot"></span> ONLINE · 842 / 1000 PLAYERS</p></div><div class="server-numbers"><div><small>PING</small><b>32 ms</b></div><div><small>UPTIME</small><b>99.9%</b></div><button class="primary" onclick="notify('Сервер доступний')">CONNECT →</button></div></section>
+  <section class="weapon panel">
+    <div class="weapon-head"><span>WEAPON</span><b>PISTOL</b></div>
+    <div class="weapon-art">◈</div>
+    <div class="ammo"><strong>12</strong><span>/ 48</span></div>
+    <small class="weapon-mode">SEMI AUTO</small>
+  </section>
 
-<section id="community" class="community"><div><div class="eyebrow">JOIN THE COMMUNITY</div><h2>ГРАЙ РАЗОМ</h2><p>PC · MOBILE · CONSOLE</p></div><div class="platforms"><div>▣<span>PC</span></div><div>▱<span>MOBILE</span></div><div>◇<span>CONSOLE</span></div></div></section>
+  <section class="minimap panel">
+    <div class="map">
+      <div class="road r1"></div><div class="road r2"></div><div class="road r3"></div>
+      <div class="district d1"></div><div class="district d2"></div><div class="district d3"></div>
+      <div class="player-pin">◆</div>
+      <div class="map-label">BOSS CITY</div>
+    </div>
+    <div class="mapbar"><span>GPS</span><b>● ACTIVE</b></div>
+  </section>
+
+  <section class="inventory">
+    <div class="inv-title"><span>WEAPON INVENTORY</span><b>1 — 6</b></div>
+    <div class="slots">
+      <div class="slot"><kbd>1</kbd><div class="icon fist">✊</div><strong>FIST</strong><small>∞</small></div>
+      <div class="slot selected"><kbd>2</kbd><div class="icon">⌁</div><strong>PISTOL</strong><small>12 / 48</small></div>
+      <div class="slot"><kbd>3</kbd><div class="icon">╾</div><strong>SMG</strong><small>30 / 120</small></div>
+      <div class="slot"><kbd>4</kbd><div class="icon">╱</div><strong>RIFLE</strong><small>24 / 96</small></div>
+      <div class="slot"><kbd>5</kbd><div class="icon">◫</div><strong>SHOTGUN</strong><small>8 / 40</small></div>
+      <div class="slot"><kbd>6</kbd><div class="icon">◁</div><strong>SNIPER</strong><small>5 / 25</small></div>
+    </div>
+  </section>
+
+  <div class="platform"><span>PC</span><i></i><span>MOBILE</span><i></i><span>CONSOLE</span></div>
+  <div class="server"><span class="dot"></span> SERVER #01 <b>842 / 1000</b></div>
 </main>
-<footer><b>BOSS<span>RP</span></b><span>© 2026 BOSS RP PROJECT</span><span>DISCORD · RULES · SUPPORT</span></footer>
-<div id="toast"></div><script src="script.js"></script>
-</body></html>
+<script src="script.js"></script>
+</body>
+</html>
